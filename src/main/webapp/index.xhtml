@@ -17,6 +17,11 @@
             <f:facet name="header">Information</f:facet>
             <h:outputText value="#{t.projectinfo}"/>
         </p:column>
+        <p:column>
+            <p:dataList value="#{t.tags}" var="tag">
+                <h:outputText value="#{tag.tagName}"/>
+            </p:dataList>
+        </p:column>
     </p:dataTable>
 </h:body>
 </html>
