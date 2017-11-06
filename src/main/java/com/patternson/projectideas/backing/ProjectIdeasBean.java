@@ -28,4 +28,12 @@ public class ProjectIdeasBean implements Serializable {
     public void setProjectIdeas(List<ProjectIdea> projectIdeas) {
         this.projectIdeas = projectIdeas;
     }
+
+    public ProjectIdeaFacade getProjectIdeaEJB() {
+        return projectIdeaEJB;
+    }
+
+    public void setProjectIdeaEJB(ProjectIdeaFacade projectIdeaEJB) {
+        this.projectIdeaEJB = projectIdeaEJB;
+    }
 }

@@ -11,7 +11,7 @@ public class ProjectIdea {
     @Column(name = "projectid")
     private Integer projectid;
 
-    @Column(name="projectname")
+    @Column(name = "projectname")
     private String projectname;
 
     @Column(name = "projectinfo")
@@ -23,8 +23,15 @@ public class ProjectIdea {
             joinColumns = {@JoinColumn(name = "projectid", referencedColumnName = "projectid")},
             inverseJoinColumns = {@JoinColumn(name = "tagid", referencedColumnName = "tagid")}
     )
-
     private List<Tag> tags;
+
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
 
     public Integer getProjectid() {
         return projectid;
@@ -48,13 +55,5 @@ public class ProjectIdea {
 
     public void setProjectinfo(String projectinfo) {
         this.projectinfo = projectinfo;
-    }
-
-    public List<Tag> getTags() {
-        return tags;
-    }
-
-    public void setTags(List<Tag> tags) {
-        this.tags = tags;
     }
 }
