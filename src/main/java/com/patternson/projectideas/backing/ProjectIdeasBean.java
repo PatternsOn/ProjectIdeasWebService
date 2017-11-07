@@ -18,6 +18,25 @@ public class ProjectIdeasBean implements Serializable {
 
     private List<ProjectIdea> projectIdeas;
 
+    private String newProjectName;
+    private String newProjectInfo;
+
+    public String getNewProjectName() {
+        return newProjectName;
+    }
+
+    public void setNewProjectName(String newProjectName) {
+        this.newProjectName = newProjectName;
+    }
+
+    public String getNewProjectInfo() {
+        return newProjectInfo;
+    }
+
+    public void setNewProjectInfo(String newProjectInfo) {
+        this.newProjectInfo = newProjectInfo;
+    }
+
     public List<ProjectIdea> getProjectIdeas() {
         if (projectIdeas == null) {
             projectIdeas = projectIdeaEJB.findAll();
@@ -25,15 +44,24 @@ public class ProjectIdeasBean implements Serializable {
         return projectIdeas;
     }
 
+    public void newProjectIdea() {
+        ProjectIdea p = new ProjectIdea();
+        p.setProjectname(newProjectName);
+        p.setProjectinfo(newProjectInfo);
+        projectIdeaEJB.create(p);
+        projectIdeas.add(p);
+        newProjectInfo = "";
+        newProjectInfo = "";
+    }
+
+    public void saveProjectIdea(ProjectIdea p) {
+        projectIdeaEJB.edit(p);
+    }
+
     public void setProjectIdeas(List<ProjectIdea> projectIdeas) {
         this.projectIdeas = projectIdeas;
     }
 
-    public ProjectIdeaFacade getProjectIdeaEJB() {
-        return projectIdeaEJB;
-    }
 
-    public void setProjectIdeaEJB(ProjectIdeaFacade projectIdeaEJB) {
-        this.projectIdeaEJB = projectIdeaEJB;
-    }
+
 }

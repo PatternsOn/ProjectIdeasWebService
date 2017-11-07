@@ -8,10 +8,17 @@
 	  xmlns:p="http://primefaces.org/ui">
 <h:head></h:head>
 <h:body>
-	<p:dataTable value="#{projectIdeasBean.projectIdeas}" var="t">
+	<p:dataTable id="projectIdeaTable" value="#{projectIdeasBean.projectIdeas}" var="t">
 		<p:column>
 			<f:facet name="header">Project Idea</f:facet>
 			<h:outputText value="#{t.projectname}"/>
+
+
+			<f:facet name="footer">
+				<p:outputPanel style="text-align: left;">
+					<p:commandButton value="+" type="button" onclick="PF('newProjectIdeaModal').show();"/>
+				</p:outputPanel>
+			</f:facet>
 		</p:column>
 		<p:column>
 			<f:facet name="header">Information</f:facet>
@@ -24,5 +31,20 @@
 			</p:dataList>
 		</p:column>
 	</p:dataTable>
+
+	<p:dialog header="Add new project idea" widgetVar="newProjectIdeaModal" modal="true" height="300" width="500">
+				<h:form id="new-project-form">
+					<br/>
+					<p:panelGrid columns="2"  layout="grid" styleClass="ui-panelgrid-blank">
+						<h:outputLabel for="projectIdeaName">Project name:</h:outputLabel>
+						<h:inputText id="projectIdeaName" value="#{projectIdeasBean.newProjectName}" required="true" requiredMessage="Projectname is required"/>
+
+						<h:outputLabel for="projectIdeaInfo">Info: </h:outputLabel>
+						<h:inputText id="projectIdeaInfo" value="#{projectIdeasBean.newProjectInfo}" required="true" requiredMessage="Info is required"/>
+
+						<h:commandButton id="newProject-button" value="Submit" action="#{projectIdeasBean.newProjectIdea}" update="projectIdeaTable"/>
+					</p:panelGrid>
+				</h:form>
+	</p:dialog>
 </h:body>
 </html>

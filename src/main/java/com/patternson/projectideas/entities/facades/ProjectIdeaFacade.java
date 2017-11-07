@@ -21,4 +21,12 @@ public class ProjectIdeaFacade {
         cq.select(cq.from(ProjectIdea.class));
         return em.createQuery(cq).getResultList();
     }
+
+    public void create(ProjectIdea entity) {
+        em.persist(entity);
+    }
+
+    public void edit(ProjectIdea entity) {
+        em.merge(entity);
+    }
 }
