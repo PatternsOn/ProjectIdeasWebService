@@ -7,10 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d1a936d-c87d-430c-a50d-80c7b7f1a4bb" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/projectideas.iml" afterPath="$PROJECT_DIR$/ProjectIdeasWebService.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/projectideas_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/projectideas_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,8 +23,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="225">
-                <caret line="15" column="78" lean-forward="true" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -401,12 +397,12 @@
       <workItem from="1510745993632" duration="5915000" />
       <workItem from="1510756688174" duration="74000" />
       <workItem from="1510756769442" duration="64000" />
-      <workItem from="1510756840757" duration="543000" />
+      <workItem from="1510756840757" duration="584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31164000" />
+    <option name="totallyTimeSpent" value="31205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1722" y="23" width="1718" height="1332" extended-state="0" />
@@ -760,8 +756,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="15" column="78" lean-forward="true" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
             <folding />
           </first_editor>
           <second_editor />

@@ -1,4 +1,4 @@
-# Projectideas
+# ProjectideasWebService
 
 A micro school project. The idea is to make a database for storing ideas for simple 
 school projects.
