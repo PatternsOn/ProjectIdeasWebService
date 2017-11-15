@@ -4,7 +4,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="projectideas" />
+          <element id="module-output" name="ProjectIdeasWebService" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.1.4" />
@@ -14,7 +14,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/projectideas/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="projectideas/web/Web" />
+      <element id="javaee-facet-resources" facet="ProjectIdeasWebService/web/Web" />
     </root>
   </artifact>
 </component>
