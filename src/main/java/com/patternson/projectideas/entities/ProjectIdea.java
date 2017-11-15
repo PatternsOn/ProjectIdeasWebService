@@ -17,21 +17,21 @@ public class ProjectIdea {
     @Column(name = "projectinfo")
     private String projectinfo;
 
-    @ManyToMany
-    @JoinTable(
-            name="project_tag",
-            joinColumns = {@JoinColumn(name = "projectid", referencedColumnName = "projectid")},
-            inverseJoinColumns = {@JoinColumn(name = "tagid", referencedColumnName = "tagid")}
-    )
-    private List<Tag> tags;
-
-    public List<Tag> getTags() {
-        return tags;
-    }
-
-    public void setTags(List<Tag> tags) {
-        this.tags = tags;
-    }
+//    @ManyToMany
+//    @JoinTable(
+//            name="project_tag",
+//            joinColumns = {@JoinColumn(name = "projectid", referencedColumnName = "projectid")},
+//            inverseJoinColumns = {@JoinColumn(name = "tagid", referencedColumnName = "tagid")}
+//    )
+//    private List<Tag> tags;
+//
+//    public List<Tag> getTags() {
+//        return tags;
+//    }
+//
+//    public void setTags(List<Tag> tags) {
+//        this.tags = tags;
+//    }
 
     public Integer getProjectid() {
         return projectid;

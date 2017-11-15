@@ -27,6 +27,6 @@ public class ProjectIdeaFacade {
     }
 
     public void edit(ProjectIdea entity) {
-        em.merge(entity);
+        em .merge(entity);
     }
 }

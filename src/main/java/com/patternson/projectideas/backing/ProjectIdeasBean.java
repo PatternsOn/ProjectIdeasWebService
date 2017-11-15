@@ -15,9 +15,7 @@ import java.util.List;
 public class ProjectIdeasBean implements Serializable {
     @EJB
     private ProjectIdeaFacade projectIdeaEJB;
-
     private List<ProjectIdea> projectIdeas;
-
     private String newProjectName;
     private String newProjectInfo;
 
