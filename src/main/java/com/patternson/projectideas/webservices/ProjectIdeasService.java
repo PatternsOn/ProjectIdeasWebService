@@ -23,6 +23,7 @@ public class ProjectIdeasService {
     @Path("all")
     @Produces(MediaType.APPLICATION_XML)
     public List<ProjectIdeasDTO> getProjectIdeasDTO() {
+        System.out.println("Made get all request");
         List<ProjectIdeasDTO> projectIdeasDTOS = new ArrayList<ProjectIdeasDTO>();
 
         for (ProjectIdea projectIdeas : projectIdeaEJB.findAll()) {
@@ -36,6 +37,7 @@ public class ProjectIdeasService {
     @Path("/{projectID}")
     @Produces(MediaType.APPLICATION_XML)
     public ProjectIdeasDTO getProjectIdeasDTO(@PathParam("projectID") int projectID) {
+        System.out.println("Made get by id request:" + projectID);
         ProjectIdeasDTO projectIdeasDTO = new ProjectIdeasDTO();
         projectIdeasDTO.setProjectname(projectIdeaEJB.find(projectID).getProjectname());
         projectIdeasDTO.setProjectinfo(projectIdeaEJB.find(projectID).getProjectinfo());
@@ -43,9 +45,18 @@ public class ProjectIdeasService {
         return projectIdeasDTO;
     }
 
+    @DELETE
+    @Path("/{projectID}")
+    public void deleteProjectIdea(@PathParam("projectID") int projectID) {
+        System.out.println("Made delete request for: " + projectID);
+        projectIdeaEJB.delete(projectID);
+    }
+
     @POST
     @Path("/{name}, {info}")
+    @Consumes(MediaType.APPLICATION_XML)
     public void postProjectIdea(@PathParam("name") String name, @PathParam("info") String info) {
+        System.out.println("Made post request with param: " + name + " & " + info);
         ProjectIdeasDTO projectIdeasDTO = new ProjectIdeasDTO();
         projectIdeasDTO.setProjectname(name);
         projectIdeasDTO.setProjectinfo(info);

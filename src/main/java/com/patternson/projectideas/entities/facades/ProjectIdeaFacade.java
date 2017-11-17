@@ -20,6 +20,10 @@ public class ProjectIdeaFacade {
         return em.find(ProjectIdea.class, id);
     }
 
+    public void delete(int id) {
+        em.remove(id);
+    }
+
 
     public List<ProjectIdea> findAll() {
         CriteriaBuilder cb = em.getCriteriaBuilder();
@@ -45,6 +49,8 @@ public class ProjectIdeaFacade {
     public void edit(ProjectIdea entity) {
         em .merge(entity);
     }
+
+
 
 //    CriteriaBuilder cb = em.getCriteriaBuilder();
 //    CriteriaQuery<Object> cq = cb.createQuery();
