@@ -42,15 +42,16 @@ public class ProjectIdeasBean implements Serializable {
         return projectIdeas;
     }
 
-    public void newProjectIdea() {
-        ProjectIdea p = new ProjectIdea();
-        p.setProjectname(newProjectName);
-        p.setProjectinfo(newProjectInfo);
-        projectIdeaEJB.create(p);
-        projectIdeas.add(p);
-        newProjectInfo = "";
-        newProjectInfo = "";
-    }
+    // Dont use with JAX-rs
+//    public void newProjectIdea() {
+//        ProjectIdea p = new ProjectIdea();
+//        p.setProjectname(newProjectName);
+//        p.setProjectinfo(newProjectInfo);
+//        projectIdeaEJB.create(p);
+//        projectIdeas.add(p);
+//        newProjectInfo = "";
+//        newProjectInfo = "";
+//    }
 
     public void saveProjectIdea(ProjectIdea p) {
         projectIdeaEJB.edit(p);
